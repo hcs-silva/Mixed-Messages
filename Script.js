@@ -18,13 +18,23 @@ for (let property in Motivation) {
 switch (property) {
     case "Emotion":
         let emotionIndex =randNum(Motivation[property].length);
-        Motivational.push(Motivation[property][emotionIndex]);
+        Motivational.push(`If you are feeling "${Motivation[property][emotionIndex]}".`);
+        break;
     case "Quote" :
         let quoteIndex =randNum(Motivation[property].length);
-        Motivational.push(Motivation[property][qouteIndex]);
+        Motivational.push(`Then "${Motivation[property][quoteIndex]}" .`);
+        break;
     case "Solution" :
         let solutionIndex =randNum(Motivation[property].length);
-        Motivational.push(Motivation[property][solutionIndex]);
+        Motivational.push(`And "${Motivation[property][solutionIndex]}.`);
+   break;
 }
 
 }
+
+const Formatar = (array) => {
+    const formatted= Motivational.join('\n');
+    console.log(formatted);
+}
+
+Formatar(Motivational)
