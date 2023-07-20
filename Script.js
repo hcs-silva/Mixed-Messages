@@ -31,7 +31,7 @@ switch (property) {
 }
 
 }
-
+//Junta os resultados do switch statement injetados no array Motivational e junta-os com uma quera de linha.
 const Formatar = (array) => {
     const formatted= Motivational.join('\n');
     console.log(formatted);
